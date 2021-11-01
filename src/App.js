@@ -1,31 +1,25 @@
 import React from "react";
 import "./App.css";
-import { Nav, Navbar } from "react-bootstrap";
-import { ReactComponent as Logo } from "./logo.svg";
+// import { Nav, Navbar } from "react-bootstrap";
+
+// import { ReactComponent as Logo } from "./logo.svg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function App() {
+import Contact from "./components/Contact";
+import Home from "./components/Home";
+import NavigationBar from "./components/NavigationBar";
+import "react-bootstrap/dist/react-bootstrap.min.js";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+function App() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="#home">
-        <Logo
-          alt=""
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-        />
-        Throbac
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="justify-content-end" style={{ width: "95%" }}>
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link>   </Nav.Link>
-          <Nav.Link href="#contact_us">Contact Us</Nav.Link>
-         
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <div className="App">
+      <Router>
+        <NavigationBar></NavigationBar>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/contact" component={Contact}></Route>
+      </Router>
+    </div>
   );
 }
+export default App;
