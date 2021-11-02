@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 import NavigationBar from "./components/NavigationBar";
 import "react-bootstrap/dist/react-bootstrap.min.js";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
@@ -19,4 +19,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

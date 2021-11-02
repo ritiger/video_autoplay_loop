@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { ReactComponent as Logo } from "./logo.svg";
+import { ReactComponent as Logo } from "../assets/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
@@ -46,4 +46,5 @@ function NavigationBar() {
     </Navbar>
   );
 }
+
 export default NavigationBar;
